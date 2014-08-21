@@ -1,0 +1,44 @@
+#include <cstdio>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+	string binPath = argv[1];
+
+	printf("size %d\n", sizeof(wchar_t));
+
+	return 0;
+	FILE *fp = fopen(binPath.c_str(), "rb");
+
+	if(fp == NULL){
+		printf("Error when opening the file\n");
+		return 1;
+	}
+
+	unsigned int t, tb, d, db, fb;
+
+	while(!feof(fp)){
+
+		fread(&tb, sizeof(unsigned int), 1, fp);
+		fread(&db, sizeof(unsigned int), 1, fp);
+		fread(&fb, sizeof(unsigned int), 1, fp);
+
+		printf("%u %u %u\n", tb, db, fb);
+
+		if(tb < t || (tb == t && db < d)){
+			printf("Erro %u %u %u\n", t, d, fb);
+
+			printf("Invalid file\n");
+//			return 1;
+		}
+
+	}
+
+	fclose(fp);
+
+	printf("Valid file\n");
+
+	return 0;
+}
