@@ -7,4 +7,4 @@ This project was made for the lecture Information Retrievel - Web Search Engine 
 
 irSearch is currently running with a 5GB collection indexed, you can test it yourself at http://greenwich.lbd.dcc.ufmg.br/lizardo/ri/
 
-The retrieve models implemented in irSearch are: Okapi BM25, Cosine, PageRank, Boolean and some combinations of them.
+The models implemented in irSearch are: Okapi BM25, Cosine, PageRank, Boolean and some combinations of them.
