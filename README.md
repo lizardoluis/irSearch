@@ -1,7 +1,7 @@
 irSearch
 ========
 
-**irSearch is simple search engine able to index HTML pages and to retrieve using some IR simple models**
+**irSearch is a toy C++ search engine able to index HTML pages and to retrieve using some IR simple models**
 
 This project was made for the lecture Information Retrievel - Web Search Engine offered in UFMG. For more information about the lecture go to http://homepages.dcc.ufmg.br/~nivio/br/teaching-ri-14.php
 
