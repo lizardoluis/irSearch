@@ -26,6 +26,8 @@ function submit() {
 	$.get( "searcher.php", { model: $model, query: $query } )
 	.done(function( msg ) {
 		try {
+			msg = msg.replace(/[^\x20-\x7E]+/g, '');
+			
 			console.log(msg);
 			var obj = JSON.parse(msg);
 
